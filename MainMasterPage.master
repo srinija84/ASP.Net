@@ -1,0 +1,128 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMasterPage.master.cs" Inherits="MainMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            height: 21px;
+        }
+        .style2
+        {
+            height: 246px;
+        }
+        .style3
+        {
+            height: 28px;
+        }
+        .style4
+        {
+            height: 28px;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: small;
+        }
+        </style>
+</head>
+    
+<body>
+    <center>
+    <form id="form1" runat="server">
+    <table width="100%" style="background-image:url('os72sexyblack.jpg')">
+    <tr>     
+    <td width="5%"></td><td width="90%">
+           <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:Image ID="Image1" runat="server" Height="184px" 
+            ImageUrl="~/Images/Title.JPG" Width="100%" />
+        </td><td width="5%"></td>
+    </tr>
+    <tr>
+    <td width="5%" class="style1"></td>
+        <td width="90%" class="style1"><table width="100%" 
+                style="background-image:url('Images/tab1.JPG'); height: 48px;">
+        <tr>           
+        <td align="center">
+            <asp:Menu ID="UserMenu" runat="server" Orientation="Horizontal" Font-Bold="True" Font-Size="Large"
+                        ForeColor="White" Height="16px" Width="691px" RenderingMode="Table">
+                        <DynamicMenuItemStyle  Font-Bold="True" BackColor="#D55300" ForeColor="White" />
+                        <Items>
+                            <asp:MenuItem Text="|||" Value="|||"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                            <asp:MenuItem Text="AboutUs" Value="AboutUs" NavigateUrl="~/AboutUs.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                            <asp:MenuItem Text="ContactUs" Value="ContactUs" NavigateUrl="~/ContactUs.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                            <asp:MenuItem Text="Registration" Value="Registration" NavigateUrl="~/frmRegistration.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                            <asp:MenuItem Text="Request" Value="Request Password">
+                                <asp:MenuItem Text="Password" Value="Password" NavigateUrl="~/frmRequestPassword.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Decrypt" Value="Decrypt" NavigateUrl="~/frmDecryptPassword.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                            <asp:MenuItem Text="Login" Value="Login">
+                                <asp:MenuItem NavigateUrl="~/Admin/frmAdminHome.aspx" Text="Admin" Value="Admin"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/User/frmUserHomePage.aspx" Text="User" Value="User"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="|||" Value="|||"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>            
+            <%--<asp:Menu ID="Menu1" runat="server" Font-Bold="True" Font-Size="Large" 
+                ForeColor="White" Orientation="Horizontal">
+                <StaticSelectedStyle Font-Underline="False" />
+                <StaticMenuItemStyle ItemSpacing="5px" Width="85px" />
+                <StaticHoverStyle Font-Underline="True" />
+                <Items>
+                    <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/frmHomePage.aspx"></asp:MenuItem>
+                    <asp:MenuItem></asp:MenuItem>
+                    <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                    <asp:MenuItem></asp:MenuItem>
+                    <asp:MenuItem Text="About Us" Value="About Us" NavigateUrl="~/frmAboutUs.aspx"></asp:MenuItem>
+                    <asp:MenuItem></asp:MenuItem>
+                    <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                    <asp:MenuItem></asp:MenuItem>
+                    <asp:MenuItem Text="Contact Us" Value="Contact Us" 
+                        NavigateUrl="~/frmContactus.aspx"></asp:MenuItem>
+                    <asp:MenuItem></asp:MenuItem>
+                    <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                    <asp:MenuItem></asp:MenuItem>
+                    <asp:MenuItem Text="Login" Value="Login" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                    <asp:MenuItem></asp:MenuItem>
+                    <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                    <asp:MenuItem></asp:MenuItem>
+                    <asp:MenuItem Text="Register" Value="Register" 
+                        NavigateUrl="~/frmRegistration.aspx"></asp:MenuItem>
+                </Items>
+            </asp:Menu>--%>
+            </td>
+        </tr>
+        </table></td><td width="5%" class="style1"></td>
+    </tr>
+    <tr>
+    <td width="5%" class="style2"></td><td width="90%" bgcolor="White" class="style2" 
+            valign="top">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        </td><td width="5%" class="style2"></td>
+    </tr>
+    <tr>
+    <td width="5%" class="style3"></td><td width="90%"  
+            style="background-image:url('Images/tab1.JPG'); " align="center" class="style4">Copy Rights &copy; All 
+        Rights Reserved</td><td width="5%" 
+            class="style3"></td>
+    </tr>
+    <tr>
+    <td width="5%"></td><td width="90%">
+        <br />
+        </td><td width="5%"></td>
+    </tr>
+    </table>
+    </form>
+        </center>
+    </body>
+</html>
